@@ -1,0 +1,26 @@
+# Node
+node_modules/
+
+# PHP
+/vendor/
+composer.lock
+
+# Laravel
+/storage/
+/.env
+.phpunit.result.cache
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Rasa
+rasa/models/
