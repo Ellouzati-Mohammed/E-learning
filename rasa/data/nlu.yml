@@ -1,0 +1,123 @@
+version: "3.1"
+
+nlu:
+
+- intent: greet
+  examples: |
+    - Bonjour
+    - Salut
+    - Coucou
+    - Hey
+    - Hello
+    - Bonsoir
+    - Bien le bonjour
+    - Salut à toi
+    - Yo
+    - Rebonjour
+    - Bonjour à tous
+    - Bonjour, comment ça va ?
+    - Salut, ça va ?
+    - Hello tout le monde
+    - Coucou, tu vas bien ?
+    - Hé salut !
+    - Hello, assistant
+    - Bon matin
+    - Bienvenue
+    - C'est moi
+
+- intent: goodbye
+  examples: |
+    - Au revoir
+    - À plus tard
+    - Je dois y aller
+    - Bye
+    - À bientôt
+    - Ciao
+    - À la prochaine
+    - On se reparle plus tard
+    - À plus
+    - Je m'en vais
+    - Je te laisse
+    - Salut !
+    - Bon, je file
+    - On se dit à bientôt
+    - Merci, au revoir
+    - À demain
+    - Bonne soirée
+    - Bonne nuit
+    - Je quitte la conversation
+    - Je pars maintenant
+
+- intent: ask_domains
+  examples: |
+    - Quels sont vos domaines ?
+    - Montrez les sujets disponibles
+    - Liste des domaines
+    - Quels sont les thèmes proposés ?
+    - Peux-tu m'afficher les domaines ?
+    - Donne-moi la liste des domaines
+    - C'est quoi les domaines disponibles ?
+    - Je veux voir les domaines
+    - Tu as quels domaines ?
+    - Montre-moi les domaines
+    - Quels domaines avez-vous ?
+    - Quelles sont les catégories ?
+    - Quels sujets proposez-vous ?
+    - Qu'est-ce que je peux apprendre ?
+    - Les domaines d'apprentissage ?
+    - Dis-moi les thèmes
+
+
+- intent: ask_domain_details
+  examples: |
+      - Donne-moi les détails du domaine [9](domain_id)
+      - Quels sont les détails du domaine [12](domain_id) ?
+      - Parle-moi du domaine [5](domain_id)
+      - Je veux en savoir plus sur le domaine [3](domain_id)
+      - Détails pour le domaine [7](domain_id)
+      - C'est quoi le contenu du domaine [2](domain_id) ?
+      - Tu peux m'expliquer ce qu'il y a dans le domaine [6](domain_id) ?
+      - Que contient le domaine [1](domain_id) ?
+      - J'aimerais connaître le détail du domaine [8](domain_id)
+      - Peux-tu me donner les infos sur le domaine [4](domain_id) ?
+      - Montre-moi ce qu'il y a dans le domaine [10](domain_id)
+      - Infos sur le domaine [15](domain_id) s'il te plaît
+      - Je veux voir ce que propose le domaine [11](domain_id)
+      - De quoi parle le domaine [13](domain_id) ?
+      - Quelle est la description du domaine [14](domain_id) ?
+
+- intent: get_domain_courses
+  examples: |
+      - Je veux les cours du domaine [10](domain_id)
+      - Quels sont les cours du domaine [5](domain_id) ?
+      - Montre-moi les cours du domaine [3](domain_id)
+      - Liste des cours pour le domaine [7](domain_id)
+      - Cours disponibles pour le domaine [12](domain_id)
+      - Peux-tu me montrer les cours du domaine [4](domain_id) ?
+      - Je veux voir les formations du domaine [2](domain_id)
+      - Quelles leçons y a-t-il dans le domaine [1](domain_id) ?
+      - Qu'est-ce qu'on apprend dans le domaine [6](domain_id) ?
+      - Quels contenus sont disponibles pour le domaine [9](domain_id) ?
+      - Donne-moi les cours proposés dans le domaine [11](domain_id)
+      - Y a-t-il des modules dans le domaine [8](domain_id) ?
+      - Quelles ressources d'apprentissage pour le domaine [13](domain_id) ?
+      - Tu peux lister les cours du domaine [14](domain_id) ?
+      - Affiche les cours du domaine [15](domain_id)
+
+- intent: get_course_details
+  examples: |
+      - [50](course_id)
+      - [100](course_id)
+      - Info cours [50](course_id)
+      - Je veux le cours numéro [50](course_id)
+      - Montre-moi la formation [100](course_id)
+      - Donne-moi le contenu du cours [50](course_id)
+      - Détail du cours [25](course_id)
+      - Que contient le cours [75](course_id) ?
+      - Je veux voir ce qu'il y a dans le cours [60](course_id)
+      - Quelles sont les infos du cours [90](course_id) ?
+      - Affiche le contenu du cours [30](course_id)
+      - Explique-moi le cours [80](course_id)
+      - C'est quoi le cours [20](course_id) ?
+      - Montre les détails du cours [95](course_id)
+      - Peux-tu m'afficher le cours [45](course_id) ?

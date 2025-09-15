@@ -1,0 +1,40 @@
+version: "3.1"
+
+rules:
+  
+- rule: Priorité absolue aux cours
+  condition:
+  - active_loop: null
+  steps:
+    - intent: get_course_details
+    - action: action_show_course_details
+- rule: Réponse directe pour les domaines
+  steps:
+    - intent: ask_domains
+    - action: action_fetch_domains
+
+- rule: Gestion des détails de domaine
+  steps:
+    - intent: ask_domain_details
+      entities:
+        - domain_id 
+    - action: action_show_domain_details
+
+- rule: Réponse au goodbye
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+
+- rule: Répondre aux questions sur les cours d'un domaine spécifique
+  steps:
+    - intent: get_domain_courses
+    - action: action_get_domain_courses
+
+- rule: Détails de cours
+  steps:
+    - intent: get_course_details
+      entities:
+        - course_id
+    - action: action_show_course_details
+  

@@ -1,0 +1,74 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_domains
+  - ask_domain_details
+  - ask_domain_courses
+  - get_domain_courses
+  - get_course_details
+  - course_detail
+
+
+entities:
+  - domain_id
+  - course_id
+
+slots:
+  domain_id:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: domain_id
+  course_id:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: course_id
+      conditions:
+      - active_loop: null
+        requested_slot: course_id
+
+responses:
+  utter_greet:
+    - text: "Salut ! Comment vas-tu ?"
+
+  utter_cheer_up:
+    - text: "Voici quelque chose pour te remonter le moral :"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Est-ce que ça t'a aidé ?"
+
+  utter_happy:
+    - text: "Super, continue comme ça !"
+
+  utter_goodbye:
+    - text: "Au revoir"
+
+  utter_iamabot:
+    - text: "Je suis un robot, propulsé par Rasa."
+
+  utter_ask_course_id:
+    - text: "Quel cours vous intéresse ? Donnez-moi son numéro ID."
+
+actions:
+  - action_fetch_domains
+  - action_show_domain_details
+  - action_fetch_domain_courses
+  - action_get_domain_courses
+  - action_get_course_details
+  - action_course_detail
+  - action_show_course_details
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

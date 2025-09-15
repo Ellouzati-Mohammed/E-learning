@@ -5,14 +5,38 @@ node_modules/
 /vendor/
 composer.lock
 
-# Laravel
-/storage/
-/.env
-.phpunit.result.cache
+# Laravel (Back-end)
+/digitale_culture_Back_end/vendor/
+/digitale_culture_Back_end/storage/
+/digitale_culture_Back_end/.env
+/digitale_culture_Back_end/.env.example
+/digitale_culture_Back_end/composer.lock
+/digitale_culture_Back_end/node_modules/
+/digitale_culture_Back_end/.phpunit.result.cache
+/digitale_culture_Back_end/.DS_Store
+/digitale_culture_Back_end/Thumbs.db
+
+# React (Front-end)
+/digitale_culture_Front-end/node_modules/
+/digitale_culture_Front-end/.DS_Store
+/digitale_culture_Front-end/Thumbs.db
+
+# Rasa
+/rasa/.env
+/rasa/__pycache__/
+/rasa/models/
+/rasa/.DS_Store
+/rasa/Thumbs.db
 
 # VS Code
-.vscode/
+/.vscode/
 
+# Logs
+*.log
+
+# Systèmes
+.DS_Store
+Thumbs.db
 # Logs
 *.log
 
